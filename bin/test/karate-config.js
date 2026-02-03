@@ -1,7 +1,7 @@
 function fn() {
   var config = {
     env: karate.env || 'local',
-    baseUrl: 'https://example.com',
+    baseUrl: 'https://www.saucedemo.com',
     headless: true,
     slowMo: 0
   };
@@ -12,4 +12,5 @@ function fn() {
 
   return config;
 }
+
 

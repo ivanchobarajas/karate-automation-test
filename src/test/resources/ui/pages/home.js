@@ -3,8 +3,9 @@ function fn() {
 
   return {
     assertWelcome: function() {
-      driver.waitFor(locators.welcomeMessage);
+      driver.waitFor(locators.inventoryContainer);
     }
   };
 }
+
 

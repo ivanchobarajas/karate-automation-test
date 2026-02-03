@@ -43,4 +43,3 @@ docs/
 - Las páginas (page objects) se alojan en `src/test/resources/ui/pages`.
 - Los datos de prueba viven en `src/test/resources/ui/data`.
 - El runner usa TestNG con `karate-testng`.
-

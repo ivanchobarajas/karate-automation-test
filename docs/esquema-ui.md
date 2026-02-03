@@ -24,3 +24,4 @@
 - Cada pantalla tiene su archivo de locators y page object.
 - Los datos de prueba se separan por dominio o módulo.
 - Los reportes se guardan en `reports/`.
+

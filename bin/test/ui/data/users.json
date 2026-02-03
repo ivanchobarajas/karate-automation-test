@@ -1,6 +1,7 @@
 {
   "valid": {
-    "username": "demo",
-    "password": "secret"
+    "username": "standard_user",
+    "password": "secret_sauce"
   }
 }
+
