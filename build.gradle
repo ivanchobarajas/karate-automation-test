@@ -8,7 +8,7 @@ version = '1.0.0-SNAPSHOT'
 def karateVersion = '1.4.1'
 
 test {
-  useJUnitPlatform()
+  useTestNG()
   systemProperty 'karate.options', '--tags ~@ignore'
 }
 
@@ -17,7 +17,8 @@ repositories {
 }
 
 dependencies {
-  testImplementation "com.intuit.karate:karate-junit5:${karateVersion}"
+  testImplementation "com.intuit.karate:karate-testng:${karateVersion}"
+  testImplementation 'org.testng:testng:7.10.2'
 }
 
 java {
