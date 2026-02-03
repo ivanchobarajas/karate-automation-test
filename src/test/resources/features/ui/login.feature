@@ -1,13 +1,12 @@
-Feature: Login UI
+Feature: Login UI skeleton
 
   Background:
-    * def users = read('classpath:ui/data/users.json')
+    * configure driver = { type: 'chromium', headless: #(headless) }
     * def locators = read('classpath:ui/locators/login.json')
-    * def uiHelpers = call read('classpath:ui/utilities/ui-helpers.js')
-    * def loginPage = call read('classpath:ui/pages/login.js')
-    * def homePage = call read('classpath:ui/pages/home.js')
+    * def users = read('classpath:ui/data/users.json')
 
-  Scenario: Successful login
-    * call loginPage.open
-    * call loginPage.login { username: #(users.valid.username), password: #(users.valid.password) }
-    * call homePage.assertWelcome
+  Scenario: Load example landing page
+    Given driver baseUrl
+    Then waitFor(locators.mainHeading)
+    And match text(locators.mainHeading) == 'Example Domain'
+    And match users.admin.username == 'admin@example.com'

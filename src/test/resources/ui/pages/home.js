@@ -1,9 +1,7 @@
-function fn() {
-  var locators = read('classpath:ui/locators/login.json');
-
+function homePage() {
   return {
-    assertWelcome: function() {
-      driver.waitFor(locators.welcomeMessage);
+    open: function(baseUrl) {
+      driver(baseUrl);
     }
   };
 }

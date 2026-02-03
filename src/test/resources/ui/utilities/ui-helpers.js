@@ -1,15 +1,10 @@
-function fn() {
-  var config = karate.config;
-
-  karate.configure('driver', {
-    type: 'playwright',
-    headless: config.headless,
-    slowMo: config.slowMo
-  });
-
+function uiHelpers() {
   return {
-    waitForReady: function() {
-      driver.waitFor('body');
+    open: function(url) {
+      driver(url);
+    },
+    waitForVisible: function(selector) {
+      waitFor(selector);
     }
   };
 }

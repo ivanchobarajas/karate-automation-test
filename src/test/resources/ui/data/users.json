@@ -1,6 +1,6 @@
 {
-  "valid": {
-    "username": "demo",
-    "password": "secret"
+  "admin": {
+    "username": "admin@example.com",
+    "password": "ChangeMe123"
   }
 }

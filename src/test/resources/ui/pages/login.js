@@ -1,14 +1,13 @@
-function fn() {
+function loginPage() {
   var locators = read('classpath:ui/locators/login.json');
 
   return {
-    open: function() {
-      driver.get(karate.get('baseUrl') + '/login');
+    locators: locators,
+    open: function(baseUrl) {
+      driver(baseUrl);
     },
-    login: function(payload) {
-      driver.input(locators.username, payload.username);
-      driver.input(locators.password, payload.password);
-      driver.click(locators.submit);
+    headingText: function() {
+      return text(locators.mainHeading);
     }
   };
 }

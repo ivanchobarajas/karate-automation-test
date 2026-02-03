@@ -1,6 +1,4 @@
 {
-  "username": "#username",
-  "password": "#password",
-  "submit": "button[type='submit']",
-  "welcomeMessage": "[data-test='welcome']"
+  "mainHeading": "h1",
+  "moreInfoLink": "a"
 }
