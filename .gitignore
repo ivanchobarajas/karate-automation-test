@@ -1,31 +1,26 @@
-diff --git a/.gitignore b/.gitignore
-new file mode 100644
-index 0000000000000000000000000000000000000000..dd7c7a25868eddea6affc9ed2ea4ac8f708df065
---- /dev/null
-+++ b/.gitignore
-@@ -0,0 +1,24 @@
-+# Gradle
-+.gradle/
-+build/
-+
-+# IntelliJ
-+.idea/
-+*.iml
-+
-+# VS Code
-+.vscode/
-+
-+# Eclipse
-+.classpath
-+.project
-+.settings/
-+
-+# Mac
-+.DS_Store
-+
-+# Logs
-+*.log
-+
-+# Reports
-+reports/
+# Gradle
+.gradle/
+build/
+
+# IntelliJ
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# Mac
+.DS_Store
+
+# Logs
+*.log
+
+# Reports
+reports/
+/
 
