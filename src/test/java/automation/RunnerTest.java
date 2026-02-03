@@ -2,23 +2,32 @@ package automation;
 
 import com.intuit.karate.Results;
 import com.intuit.karate.Runner;
-import static org.testng.Assert.*;
 import org.testng.annotations.Test;
+import static org.testng.Assert.assertEquals;
 
 public class RunnerTest {
 
-    // Reemplazamos el método de lista por una variable simple para mantener la ruta
-    private String featurePath = "classpath:features/ui";
-
     @Test
     public void testAll() {
-        // Runner.path() reemplaza la antigua lógica de herencia
-        Results results = Runner.path(featurePath)
-                                .outputHtmlReport(true)
-                                .parallel(1);
+        Results results = Runner.path("classpath:features/ui")
+                .tags("~@ignore")
+                .outputCucumberJson(true)
+                .parallel(1);
         
-        // Validación para que TestNG marque la prueba como fallida si Karate falla
-        assertEquals(results.getFailCount(), 0, results.getErrorMessages());
+        // Mostrar resultados detallados
+        System.out.println("========================================");
+        System.out.println("Tests ejecutados: " + results.getFeaturesTotal());
+        System.out.println("Scenarios pasados: " + results.getScenariosPassed());
+        System.out.println("Scenarios fallidos: " + results.getFailCount());
+        System.out.println("========================================");
+        
+        if (results.getFailCount() > 0) {
+            System.out.println("ERRORES:");
+            System.out.println(results.getErrorMessages());
+        }
+        
+        assertEquals(results.getFailCount(), 0, 
+            "Hay tests fallidos: " + results.getErrorMessages());
     }
 }
 
