@@ -12,3 +12,4 @@ function fn() {
 
   return config;
 }
+

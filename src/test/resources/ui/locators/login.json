@@ -4,3 +4,4 @@
   "submit": "button[type='submit']",
   "welcomeMessage": "[data-test='welcome']"
 }
+

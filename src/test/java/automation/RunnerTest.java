@@ -1,10 +1,19 @@
 package automation;
 
-import com.intuit.karate.junit5.Karate;
+import com.intuit.karate.testng.KarateRunner;
+import java.util.Arrays;
+import java.util.List;
+import org.testng.annotations.Test;
 
-class RunnerTest {
-  @Karate.Test
-  Karate runUi() {
-    return Karate.run("classpath:features/ui").relativeTo(getClass());
+public class RunnerTest extends KarateRunner {
+  @Override
+  public List<String> getFeaturePaths() {
+    return Arrays.asList("classpath:features/ui");
+  }
+
+  @Test
+  public void testAll() {
+    run();
   }
 }
+
