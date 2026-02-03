@@ -3,7 +3,8 @@ function fn() {
 
   return {
     open: function() {
-      driver.get(karate.get('baseUrl') + '/login');
+      // Usamos directamente la URL base de la página (Swag Labs)
+      driver.get('https://www.saucedemo.com'); 
     },
     login: function(payload) {
       driver.input(locators.username, payload.username);
@@ -12,4 +13,3 @@ function fn() {
     }
   };
 }
-
